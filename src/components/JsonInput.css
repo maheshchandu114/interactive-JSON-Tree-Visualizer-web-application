@@ -1,0 +1,107 @@
+/* ===========================
+   THEME VARIABLES
+=========================== */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --textarea-bg: #ffffff;
+  --textarea-text: #000000;
+  --button-bg: #00796b;
+  --button-hover: #004d40;
+}
+
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --textarea-bg: #1e1e1e;
+  --textarea-text: #f5f5f5;
+  --button-bg: #26a69a;
+  --button-hover: #00796b;
+}
+
+/* ===========================
+   HALF SCREEN LAYOUT
+=========================== */
+.json-input {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: var(--bg-color);
+  color: var(--text-color);
+  padding: 20px;
+  box-sizing: border-box;
+  transition: background 0.3s ease, color 0.3s ease;
+  overflow-y: auto;
+}
+
+/* Header (title + theme toggle) */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.theme-toggle label {
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Textarea fills most of half-pane */
+.json-input textarea {
+  width: 100%;
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  font-family: monospace;
+  background: var(--textarea-bg);
+  color: var(--textarea-text);
+  resize: none;
+  transition: background 0.3s ease, color 0.3s ease;
+  min-height: 300px;
+}
+
+/* Buttons and search area */
+.json-input button {
+  padding: 10px 16px;
+  background: var(--button-bg);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.json-input button:hover {
+  background: var(--button-hover);
+}
+
+/* Search box */
+.search-box {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background: var(--textarea-bg);
+  color: var(--textarea-text);
+}
+
+/* Error message */
+.error {
+  color: red;
+  margin-top: 8px;
+  width: 100%;
+  text-align: left;
+}
